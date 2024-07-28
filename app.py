@@ -34,11 +34,7 @@ def predict():
     
     prediction = loaded_model.predict(form_data)
     return render_template('inference.html', pred=prediction[0], form=form_data)
-    # a = request.form.get('Weight')
-    # print(type(a))
-    print(width)
-    print(type(width))
-    return "mm"
+   
 
 
 if __name__ == "__main__":
