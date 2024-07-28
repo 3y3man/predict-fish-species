@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, abort 
 import joblib
 import pandas as pd
 
@@ -19,6 +19,10 @@ def predict():
     length3 = request.form.get('Length3')
     height = request.form.get('Height')
     width = request.form.get('width')
+
+        # Check if any value is missing
+    if not all([weight, length1, length2, length3, height, width]):
+        abort(400, description="Missing values in the input form. Go back and re-enter all values for an accurate prediction.")
     
     form_data = pd.DataFrame({
     'Weight': [float(weight)],
