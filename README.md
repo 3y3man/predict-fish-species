@@ -6,7 +6,7 @@ This project is a web application that predicts the species of a fish based on v
 
 - **Predict Fish Species:** Users can input the physical characteristics of a fish to get the predicted species.
 - **User-Friendly Interface:** The application provides a simple and intuitive interface for data input.
-- **Advanced Machine Learning Model:** The backend uses a pre-trained model to make accurate predictions.
+- **Advanced Machine Learning Model:** The backend uses a pre-trained logistic regression model to make accurate predictions. The trainer notebook and dataset are also available.
 
 ## Requirements
 
